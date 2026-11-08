@@ -1,0 +1,22 @@
+{
+  "name": "olivia-hub",
+  "version": "1.0.0",
+  "description": "Portal y Landing Page de aplicaciones educativas para Olivia (4.º de Primaria) - CLAVES Santillana",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "educacion",
+    "primaria",
+    "santillana",
+    "olivia",
+    "hub",
+    "landing-page",
+    "matematicas",
+    "lengua",
+    "science"
+  ],
+  "author": "franggpt-code",
+  "license": "MIT"
+}

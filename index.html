@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌟 Portal de Aprendizaje de Olivia · 4.º Primaria</title>
+  <meta name="description" content="Landing page centralizada con todos los repositorios y aplicaciones interactivas de Olivia para 4.º de Primaria (Matemáticas, Lengua y Science)">
+
+  <!-- Tailwind CSS Precompilado local -->
+  <link rel="stylesheet" href="css/tailwind.min.css">
+  <!-- Estilos propios y blindajes CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌟</text></svg>">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
+
+  <!-- =========================================================================
+       CABECERA PRINCIPAL (BLINDADA 100% SÓLIDA ANTI-SUPERPOSICIÓN)
+       ========================================================================= -->
+  <header class="app-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+      <!-- Logo y Título -->
+      <div class="flex items-center gap-3">
+        <a href="/" class="flex items-center gap-2.5 group">
+          <span class="text-3xl p-1.5 bg-indigo-50 border border-indigo-200 rounded-2xl group-hover:scale-110 transition-transform">🎓</span>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-lg sm:text-xl font-black text-slate-900 tracking-tight">Portal Olivia</span>
+              <span class="text-[11px] font-extrabold px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-700 border border-indigo-200 uppercase tracking-wider">
+                4.º Primaria
+              </span>
+            </div>
+            <p class="text-xs text-slate-500 font-medium hidden sm:block">Santillana CLAVES / Construyendo Mundos</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Métricas rápidas y botón de sonido -->
+      <div class="flex items-center gap-2 sm:gap-4">
+        <div class="hidden md:flex items-center gap-3 text-xs font-bold text-slate-600 bg-slate-100 px-3 py-1.5 rounded-xl border border-slate-200">
+          <span class="flex items-center gap-1">
+            <span class="text-emerald-600">●</span> <span id="stat-total-temas">7</span> Temas activos
+          </span>
+          <span class="text-slate-300">|</span>
+          <span><span id="stat-total-asignaturas">3</span> Asignaturas</span>
+        </div>
+
+        <button id="sound-toggle" class="btn-bounce px-3 py-1.5 rounded-xl text-xs font-bold bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 shadow-sm flex items-center gap-1.5">
+          🔊 <span class="hidden sm:inline">Sonido ON</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       CONTENIDO PRINCIPAL
+       ========================================================================= -->
+  <main class="app-main flex-1">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- HERO BANNER PRINCIPAL (WCAG AAA) -->
+      <div class="hero-banner p-6 sm:p-10 mb-8 relative">
+        <div class="relative z-10 max-w-3xl">
+          <span class="hero-badge mb-3">
+            <span>🚀</span>
+            <span>Centro de Repaso y Evaluaciones Interactivas</span>
+          </span>
+          <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight mb-3">
+            ¡Hola, Olivia! ¿Qué entrenamos hoy?
+          </h1>
+          <p class="hero-p mb-6 max-w-2xl">
+            Accede directamente a todas las aplicaciones de repaso diseñadas para ti con misiones, simuladores de examen oficial, tests infinitos, arcade y diplomas.
+          </p>
+
+          <!-- Barra de Búsqueda Rápida -->
+          <div class="relative max-w-xl">
+            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 text-lg">
+              🔍
+            </div>
+            <input type="text" id="search-input" 
+                   placeholder="Buscar por tema o concepto (ej: plantas, agudas, salud, números romanos, sumas...)" 
+                   class="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-white text-slate-900 placeholder-slate-400 text-sm font-semibold shadow-lg border-2 border-indigo-400 focus:outline-none focus:ring-4 focus:ring-indigo-300">
+          </div>
+        </div>
+      </div>
+
+      <!-- BARRA DE FILTROS POR ASIGNATURA -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 scrollbar-none">
+        <button onclick="app.setFilter('all')" data-filter="all" 
+                class="filter-btn btn-bounce px-4 py-2.5 rounded-2xl font-bold text-xs sm:text-sm whitespace-nowrap bg-slate-900 text-white shadow-md flex items-center gap-2 border border-slate-700">
+          <span>🌟</span>
+          <span>Todas las Asignaturas</span>
+        </button>
+        <button onclick="app.setFilter('matematicas')" data-filter="matematicas" 
+                class="filter-btn btn-bounce px-4 py-2.5 rounded-2xl font-bold text-xs sm:text-sm whitespace-nowrap bg-white text-slate-700 hover:bg-slate-100 flex items-center gap-2 border border-slate-200">
+          <span>🔢</span>
+          <span>Matemáticas</span>
+          <span class="text-[11px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-extrabold">2</span>
+        </button>
+        <button onclick="app.setFilter('lengua')" data-filter="lengua" 
+                class="filter-btn btn-bounce px-4 py-2.5 rounded-2xl font-bold text-xs sm:text-sm whitespace-nowrap bg-white text-slate-700 hover:bg-slate-100 flex items-center gap-2 border border-slate-200">
+          <span>📖</span>
+          <span>Lengua Castellana</span>
+          <span class="text-[11px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-extrabold">2</span>
+        </button>
+        <button onclick="app.setFilter('science')" data-filter="science" 
+                class="filter-btn btn-bounce px-4 py-2.5 rounded-2xl font-bold text-xs sm:text-sm whitespace-nowrap bg-white text-slate-700 hover:bg-slate-100 flex items-center gap-2 border border-slate-200">
+          <span>🔬</span>
+          <span>Science / Cono</span>
+          <span class="text-[11px] px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-800 font-extrabold">3</span>
+        </button>
+        <button onclick="app.setFilter('extras')" data-filter="extras" 
+                class="filter-btn btn-bounce px-4 py-2.5 rounded-2xl font-bold text-xs sm:text-sm whitespace-nowrap bg-white text-slate-700 hover:bg-slate-100 flex items-center gap-2 border border-slate-200">
+          <span>⭐</span>
+          <span>Música & Archivo</span>
+        </button>
+      </div>
+
+      <!-- CONTENEDOR DINÁMICO DE ASIGNATURAS Y TEMAS -->
+      <div id="subjects-container">
+        <!-- Renderizado dinámicamente por app.js -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="bg-white border-t-2 border-slate-200 py-8 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2 text-sm text-slate-600 font-medium">
+        <span>❤️</span>
+        <span>Hecho con dedicación para el aprendizaje y éxito escolar de <strong>Olivia</strong></span>
+      </div>
+      <div class="flex items-center gap-4 text-xs font-bold text-slate-500">
+        <span class="flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span>Desplegado en Vercel</span>
+        </span>
+        <span>·</span>
+        <a href="https://github.com/franggpt-code" target="_blank" rel="noopener noreferrer" class="hover:text-slate-800 underline">
+          GitHub franggpt-code
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       TOAST FLOTANTE DE NOTIFICACIONES (ENLACE COPIADO)
+       ========================================================================= -->
+  <div id="toast-notification" class="toast-notice bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 border border-slate-700">
+    <span class="text-xl">✅</span>
+    <span id="toast-message" class="text-xs sm:text-sm font-bold">¡Enlace copiado con éxito!</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/audio.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+/* =============================================================================
+   ESTILOS PERSONALIZADOS · PORTAL DE APRENDIZAJE DE OLIVIA (4.º PRIMARIA)
+   ============================================================================= */
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: 'Comic Neue', 'Inter', -apple-system, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f8fafc;
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =============================================================================
+   BLINDAJE DE CABECERA (HEADER) ANTI-SOLAPAMIENTO (100% SÓLIDO)
+   ============================================================================= */
+header.app-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 100 !important;
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  border-bottom: 2px solid #e2e8f0 !important;
+  box-shadow: 0 4px 15px -2px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04) !important;
+  width: 100% !important;
+}
+
+main.app-main {
+  position: relative;
+  z-index: 1;
+  padding-top: 1.5rem !important;
+  padding-bottom: 3.5rem !important;
+  flex: 1;
+}
+
+/* =============================================================================
+   HERO BANNER PRINCIPAL (WCAG AAA)
+   ============================================================================= */
+.hero-banner {
+  background-color: #0f172a !important;
+  background-image: linear-gradient(135deg, #0f172a 0%, #1e1b4b 40%, #065f46 100%) !important;
+  color: #ffffff !important;
+  border-radius: 1.5rem !important;
+  border: 2px solid #334155 !important;
+  box-shadow: 0 16px 36px -10px rgba(15, 23, 42, 0.5) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-banner h1, .hero-banner h2 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  padding: 0.35rem 0.85rem !important;
+  border-radius: 9999px !important;
+  background-color: rgba(0, 0, 0, 0.45) !important;
+  color: #fde047 !important; /* Amarillo oro con alto contraste */
+  border: 1px solid rgba(253, 224, 71, 0.6) !important;
+  font-size: 0.8rem !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+.hero-p {
+  color: #f8fafc !important;
+  font-size: 1.05rem !important;
+  line-height: 1.6 !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* =============================================================================
+   TARJETAS DE TEMA Y ASIGNATURAS (CARD PLAYFUL)
+   ============================================================================= */
+.card-playful {
+  background-color: #ffffff !important;
+  border-radius: 1.25rem;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-playful:hover {
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  box-shadow: 0 16px 28px -6px rgba(0, 0, 0, 0.1), 0 6px 12px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Variantes temáticas de bordes en hover */
+.card-math:hover {
+  border-color: #10b981 !important;
+}
+
+.card-lengua:hover {
+  border-color: #f59e0b !important;
+}
+
+.card-science:hover {
+  border-color: #6366f1 !important;
+}
+
+/* =============================================================================
+   BOTONES Y EFECTOS
+   ============================================================================= */
+.btn-bounce {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-bounce:hover {
+  transform: translateY(-2px);
+}
+
+.btn-bounce:active {
+  transform: translateY(1px);
+}
+
+/* =============================================================================
+   TOAST NOTIFICACIÓN FLOTANTE (COPIADO CON ÉXITO)
+   ============================================================================= */
+.toast-notice {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 200;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+}
+
+.toast-notice.show {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* =============================================================================
+   ANIMACIÓN DE PULSO SUAVE PARA INDICADORES
+   ============================================================================= */
+@keyframes softPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.75; transform: scale(1.15); }
+}
+
+.pulse-live {
+  animation: softPulse 2s infinite ease-in-out;
+}
