@@ -2,6 +2,10 @@
 
 Landing page centralizada y portal interactivo que agrupa todos los repositorios y aplicaciones web educativas desarrolladas para **Olivia (alumna de 4.º de Educación Primaria)**.
 
+> **Acceso directo al Portal:**
+> - 🌐 **Producción Principal:** [https://olivia-hub-4.vercel.app](https://olivia-hub-4.vercel.app)
+> - 🌐 **Dominio Alternativo:** [https://olivia-portal-4.vercel.app](https://olivia-portal-4.vercel.app)
+
 Permite consultar, buscar y navegar directamente a cualquiera de los temas de repaso creados para las asignaturas de **Matemáticas**, **Lengua Castellana** y **Science (Conocimiento del Medio / Ciencias de la Naturaleza)**, basados en el proyecto oficial de Santillana (*CLAVES / Construyendo Mundos*).
 
 ---
