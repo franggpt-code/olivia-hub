@@ -17,6 +17,7 @@ Permite consultar, buscar y navegar directamente a cualquiera de los temas de re
 | :--- | :--- | :--- | :--- |
 | **Tema 1** | Números de 5 cifras, descomposición y números romanos | [olivia-matematicas-4-tema1.vercel.app](https://olivia-matematicas-4-tema1.vercel.app) | [olivia-matematicas-4-tema1](https://github.com/franggpt-code/olivia-matematicas-4-tema1) |
 | **Tema 2** | La Suma y la Resta (propiedades, estimaciones y problemas) | [olivia-matematicas-4-tema2.vercel.app](https://olivia-matematicas-4-tema2.vercel.app) | [olivia-matematicas-4-tema2](https://github.com/franggpt-code/olivia-matematicas-4-tema2) |
+| **Tema 3** | La Multiplicación (propiedades, ceros, estimaciones y operaciones combinadas) | [olivia-matematicas-4-tema3.vercel.app](https://olivia-matematicas-4-tema3.vercel.app) | [olivia-matematicas-4-tema3](https://github.com/franggpt-code/olivia-matematicas-4-tema3) |
 
 ### 📖 Lengua Castellana
 | Tema | Título y Saberes Clave | URL de Producción | Repositorio GitHub |

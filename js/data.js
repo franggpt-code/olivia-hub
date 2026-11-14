@@ -13,7 +13,7 @@
  */
 
 const HUB_DATA = {
-  lastUpdated: "8 de Noviembre de 2026",
+  lastUpdated: "14 de Noviembre de 2026",
   course: "4.º de Educación Primaria",
   editorial: "Santillana · Proyecto CLAVES / Construyendo Mundos",
   student: "Olivia",
@@ -65,6 +65,23 @@ const HUB_DATA = {
           githubUrl: "https://github.com/franggpt-code/olivia-matematicas-4-tema2",
           status: "verified",
           emoji: "➕"
+        },
+        {
+          id: "matematicas-t3",
+          topicNumber: 3,
+          title: "Tema 3: La Multiplicación",
+          shortTitle: "La Multiplicación",
+          summary: "Términos de la multiplicación, ceros finales, propiedades conmutativa, asociativa y distributiva, estimaciones y operaciones combinadas.",
+          keyPoints: [
+            "Propiedad conmutativa, asociativa y distributiva",
+            "Multiplicación por 1, 2 y 3 cifras con ceros finales",
+            "Estimación de productos (redondeo a decena y centena)",
+            "Jerarquía sagrada de operaciones combinadas"
+          ],
+          vercelUrl: "https://olivia-matematicas-4-tema3.vercel.app",
+          githubUrl: "https://github.com/franggpt-code/olivia-matematicas-4-tema3",
+          status: "verified",
+          emoji: "✖️"
         }
       ]
     },
