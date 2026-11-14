@@ -97,7 +97,7 @@ const HUB_DATA = {
       accentText: "text-amber-600",
       gradient: "from-amber-600 via-orange-600 to-rose-700",
       heroBg: "linear-gradient(135deg, #78350f 0%, #c2410c 50%, #9f1239 100%)",
-      description: "Comunicación, campos semánticos y léxicos, ortografía, sílabas, acentuación de agudas y pronombres.",
+      description: "Comunicación, campos semánticos y léxicos, prefijos, palabras agudas y llanas, pronombres, demostrativos y obras narrativas.",
       topics: [
         {
           id: "lengua-t1",
@@ -132,6 +132,23 @@ const HUB_DATA = {
           githubUrl: "https://github.com/franggpt-code/olivia-lengua-4-tema2",
           status: "verified",
           emoji: "✍️"
+        },
+        {
+          id: "lengua-t3",
+          topicNumber: 3,
+          title: "Tema 3: Prefijos, Palabras Llanas, Demostrativos y el Anuncio",
+          shortTitle: "Prefijos, Llanas y Demostrativos",
+          summary: "Morfemas derivativos (des-, in-, sub-, re-, pre-), acentuación de palabras llanas y trampa de examen, demostrativos y el cartel publicitario.",
+          keyPoints: [
+            "Prefijos de negación, posición, repetición y anterioridad",
+            "Regla de acentuación de palabras llanas y trampa de examen (-n)",
+            "Los demostrativos (cercanía, distancia media y lejanía)",
+            "Obras narrativas (cuento, novela, fábula) y partes del anuncio"
+          ],
+          vercelUrl: "https://olivia-lengua-4-tema3.vercel.app",
+          githubUrl: "https://github.com/franggpt-code/olivia-lengua-4-tema3",
+          status: "verified",
+          emoji: "📖"
         }
       ]
     },
